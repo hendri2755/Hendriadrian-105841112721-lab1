@@ -1,10 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      
+           <Text style={styles.title}>Welcome to Myapp</Text>
+      <Image
+        source={require('./assets/image.png')}
+        style={styles.logo}
+      />
+      <Text style={styles.subtitle}>
+      silahkan login atau buat akun terlebih dahulu 
+      </Text>
       <View style={styles.buttonContainer}>
         <View style={[styles.button, { backgroundColor: 'red' }]}>
           <Text style={styles.buttonText}>Login</Text>
