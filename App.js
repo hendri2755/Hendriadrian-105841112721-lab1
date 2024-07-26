@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import ButtonComponent from  './component/buttonss/buttons';
 
 const App = () => {
   return (
@@ -10,15 +11,11 @@ const App = () => {
         style={styles.logo}
       />
       <Text style={styles.subtitle}>
-      silahkan login atau buat akun terlebih dahulu 
+      "login terlebih dahulu atau mendaftarkan akun terlebih dahulu jika belum memiliki akun"
       </Text>
       <View style={styles.buttonContainer}>
-        <View style={[styles.button, { backgroundColor: 'red' }]}>
-          <Text style={styles.buttonText}>Login</Text>
-        </View>
-        <View style={[styles.button, { backgroundColor: 'blue' }]}>
-          <Text style={styles.buttonText}>Register</Text>
-        </View>
+        <ButtonComponent title="Sign In" color="blue"/>
+        <ButtonComponent title="Sign Up" color="orange"/>
       </View>
     </View>
   );
@@ -31,19 +28,34 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'white',
   },
-  storeImage: {
-    width: 200, 
-    height: 100,
-    marginBottom: 20, 
+  logo: {
+    width: 150,
+    height: 150,
+    marginBottom: 20,
+  },
+  title: {
+    fontSize: 23,
+    fontWeight: 'bold',
+    color: 'black',
+    marginBottom: 20,
+  },
+  subtitle: {
+    fontSize: 15,
+    color: 'black',
+    textAlign: 'center',
+    marginHorizontal: 20,
+    marginBottom: 30,
   },
   buttonContainer: {
-    flexDirection: 'row',
+    flexDirection: 'row', 
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   button: {
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 5,
-    marginHorizontal: 10,
+    marginHorizontal: 10, 
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -53,5 +65,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-
 export default App;
