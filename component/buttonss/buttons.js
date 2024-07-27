@@ -1,6 +1,7 @@
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
-const ButtonComponent = ({ title, color, onPress }) => {
+
+const ButtonComponent = ({ title, color }) => {
   return (
     <TouchableOpacity 
       style={[styles.button, { backgroundColor: color }]} 
